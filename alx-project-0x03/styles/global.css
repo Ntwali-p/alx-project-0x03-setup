@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* styles/globals.css */
 
+/* Tailwind base imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global styles */
 body {
-  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter, sans-serif);
   font-optical-sizing: auto;
 }
