@@ -1,3 +1,4 @@
+import { ButtonProps } from "@/interfaces";
 interface ButtonProps {
   buttonLabel: string;
   buttonBackgroundColor: string;
