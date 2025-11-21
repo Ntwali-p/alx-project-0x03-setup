@@ -1,24 +1,21 @@
 interface ButtonProps {
-  buttonLabel: string
-  buttonSize?: string
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green'
-  action?: () => void
+  buttonLabel: string;
+  buttonBackgroundColor: string;
+  action: () => void;
 }
 
-const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
-
-  const backgroundColorClass = buttonBackgroundColor ? {
-    red: 'bg-red-500',
-    blue: 'bg-blue-500',
-    orange: 'bg-orange-500',
-    green: 'bg-green-500',
-  }[buttonBackgroundColor] : 'bg-slate-500'
-
+export default function Button({
+  buttonLabel,
+  buttonBackgroundColor,
+  action,
+}: ButtonProps) {
   return (
-    <button onClick={action} className={`${backgroundColorClass} ${buttonSize} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}>
+    <button
+      onClick={action}
+      className={`px-4 py-2 rounded-md text-white bg-${buttonBackgroundColor}-500`}
+    >
       {buttonLabel}
     </button>
-  )
+  );
 }
 
-export default Button;
